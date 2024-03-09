@@ -1,5 +1,5 @@
 import unittest
-from src.product_catalogue import ProductCatalogue
+from app.utils.product_catalogue import ProductCatalogue
 
 class TestProductCatalogue(unittest.TestCase):
     
