@@ -1,5 +1,5 @@
 import unittest
-from src.product_catalogue import ProductCatalogue 
+from app.utils.product_catalogue import ProductCatalogue 
 
 class service_singleton_test(unittest.TestCase):
     def test_singleton_instance(self):
