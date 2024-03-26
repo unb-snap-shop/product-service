@@ -1,37 +1,27 @@
 import unittest
-from componentFactory import ComponentFactory
+from componentManager import ComponentManager  # Adjusted import
 from component import CPU, GPU, Motherboard, RAM, Storage
-
-# Ensure components are registered with the factory.
-# This is typically done outside of tests in the actual application initialization,
-# but for standalone tests, it may be necessary to ensure registration.
-ComponentFactory.register_component('CPU', CPU)
-ComponentFactory.register_component('GPU', GPU)
-ComponentFactory.register_component('Motherboard', Motherboard)
-ComponentFactory.register_component('RAM', RAM)
-ComponentFactory.register_component('Storage', Storage)
 
 class TestComponentCreation(unittest.TestCase):
     def test_cpu_creation(self):
         cpu_data = {
-            
             "brand": "AMD",
             "model": "Ryzen 5 5600X",
             "price": 299.99,
-            **{
-                "cores": 6,
-                "threads": 12,
-                "base_clock": "3.7 GHz",  # Use 'base_clock' instead of 'baseClock'
-                "boost_clock": "4.6 GHz",  # Use 'boost_clock' instead of 'boostClock'
-                "tdp": "65W"
-            }
+            "cores": 6,
+            "threads": 12,
+            "base_clock": "3.7 GHz",
+            "boost_clock": "4.6 GHz",
+            "tdp": "65W"
+
         }
-        cpu = ComponentFactory.create_component('CPU', cpu_data)
+        cpu = ComponentManager.create_component('CPU', **cpu_data)  # Adjusted creation call
         self.assertIsInstance(cpu, CPU)
+        self.assertIsInstance(cpu.id, int)
         self.assertEqual(cpu.brand, "AMD")
         self.assertEqual(cpu.specifications["cores"], 6)
 
-
+    # Similar adjustments for the other tests...
     def test_cpu2_creation(self):
         cpu2_data = {
             
@@ -46,7 +36,8 @@ class TestComponentCreation(unittest.TestCase):
                 "tdp": "125W"
             }
         }
-        cpu2 = ComponentFactory.create_component('CPU', cpu2_data)
+        cpu2 = ComponentManager.create_component('CPU', **cpu2_data)
+        self.assertIsInstance(cpu2.id, int)
         self.assertIsInstance(cpu2, CPU)
         self.assertEqual(cpu2.brand, "Intel")
         self.assertEqual(cpu2.specifications["tdp"], "125W")
@@ -63,7 +54,7 @@ class TestComponentCreation(unittest.TestCase):
             "boost_clock": "1.71 GHz",
             "tdp": "320W"
         }
-        gpu = ComponentFactory.create_component('GPU', gpu_data)
+        gpu = ComponentManager.create_component('GPU', **gpu_data)
         self.assertIsInstance(gpu, GPU)
         self.assertEqual(gpu.brand, "NVIDIA")
         self.assertEqual(gpu.specifications["memory"], "10 GB GDDR6X")
@@ -78,7 +69,7 @@ class TestComponentCreation(unittest.TestCase):
             "memory": "128GB DDR4",
             "formFactor": "ATX"
         }
-        motherboard = ComponentFactory.create_component('Motherboard', motherboard_data)
+        motherboard = ComponentManager.create_component('Motherboard', **motherboard_data)
         self.assertIsInstance(motherboard, Motherboard)
         self.assertEqual(motherboard.brand, "ASUS")
         self.assertEqual(motherboard.specifications["chipset"], "AMD B550")
@@ -94,7 +85,7 @@ class TestComponentCreation(unittest.TestCase):
             "modules": "2 x 8GB",
             "latency": "CL16"
         }
-        ram = ComponentFactory.create_component('RAM', ram_data)
+        ram = ComponentManager.create_component('RAM', **ram_data)
         self.assertIsInstance(ram, RAM)
         self.assertEqual(ram.brand, "Corsair")
         self.assertEqual(ram.specifications["memoryType"], "DDR4")
@@ -111,7 +102,7 @@ class TestComponentCreation(unittest.TestCase):
             "rpm": "3500MB/s",
             "cache": "3300MB/s"
         }
-        storage = ComponentFactory.create_component('Storage', storage_data)
+        storage = ComponentManager.create_component('Storage', **storage_data)
         self.assertIsInstance(storage, Storage)
         self.assertEqual(storage.brand, "Samsung")
         self.assertEqual(storage.specifications["storageType"], "SSD")
@@ -130,7 +121,7 @@ class TestComponentCreation(unittest.TestCase):
                 "tdp": "125W"
             }
         }
-        cpu3 = ComponentFactory.create_component('CPU', cpu3_data)
+        cpu3 = ComponentManager.create_component('CPU', **cpu3_data)
         self.assertIsInstance(cpu3, CPU)
         self.assertEqual(cpu3.brand, "Intel")
         self.assertEqual(cpu3.specifications["tdp"], "125W")
