@@ -1,5 +1,5 @@
 import unittest
-from componentManager import ComponentManager  # Adjusted import
+from componentManager import ComponentManager  
 from component import CPU, GPU, Motherboard, RAM, Storage
 
 class TestComponentCreation(unittest.TestCase):
@@ -15,13 +15,13 @@ class TestComponentCreation(unittest.TestCase):
             "tdp": "65W"
 
         }
-        cpu = ComponentManager.create_component('CPU', **cpu_data)  # Adjusted creation call
+        cpu = ComponentManager.create_component('CPU', **cpu_data)  
         self.assertIsInstance(cpu, CPU)
         self.assertIsInstance(cpu.id, int)
         self.assertEqual(cpu.brand, "AMD")
         self.assertEqual(cpu.specifications["cores"], 6)
 
-    # Similar adjustments for the other tests...
+   
     def test_cpu2_creation(self):
         cpu2_data = {
             
@@ -31,8 +31,8 @@ class TestComponentCreation(unittest.TestCase):
             **{
                 "cores": 8,
                 "threads": 16,
-                "base_clock": "3.6 GHz",  # Use 'base_clock' instead of 'baseClock'
-                "boost_clock": "5.0 GHz",  # Use 'boost_clock' instead of 'boostClock'
+                "base_clock": "3.6 GHz",  
+                "boost_clock": "5.0 GHz",  
                 "tdp": "125W"
             }
         }
@@ -116,8 +116,8 @@ class TestComponentCreation(unittest.TestCase):
             **{
                 "cores": 8,
                 "threads": 16,
-                "base_clock": "3.6 GHz",  # Use 'base_clock' instead of 'baseClock'
-                "boost_clock": "5.0 GHz",  # Use 'boost_clock' instead of 'boostClock'
+                "base_clock": "3.6 GHz",  
+                "boost_clock": "5.0 GHz",  
                 "tdp": "125W"
             }
         }
