@@ -1,14 +1,14 @@
 import json
 
 class ProductCatalogue:
-    _instance = None # _instance holds the single instance of ProductCatalogue, initially None
+    _instance = None 
     _is_initialized = False 
 
-    # Override new to check if an instance already exists
+   
     def __new__(cls, *args, **kwargs):
         if not cls._instance:
             cls._instance = super(ProductCatalogue, cls).__new__(cls)
-        return cls._instance # else Return the instance that already exists
+        return cls._instance 
 
     def __init__(self):
         if not self._is_initialized:
