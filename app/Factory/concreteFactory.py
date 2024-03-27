@@ -1,5 +1,5 @@
 from component import CPU, GPU, Motherboard, RAM, Storage
-from componentFactoryInterface import ComponentFactoryInterface  # Update with the actual file name if needed
+from componentFactoryInterface import ComponentFactoryInterface 
 
 class CPUFactory(ComponentFactoryInterface):
     def create_component(self, **data):

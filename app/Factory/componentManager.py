@@ -28,8 +28,7 @@ class ComponentManager:
 
     @staticmethod
     def _write_to_json(component):
-        # Convert the component object to a dictionary, assuming it has a method to do so
-        # or define the conversion logic here if not.
+        
         product_data = {
             'id': component.id,
             'type': component.type,
@@ -39,16 +38,16 @@ class ComponentManager:
             'price': component.price
         }
         file_path = 'testproducts.json'
-        # Read the current data in the JSON file
+        
         try:
             with open(file_path, 'r') as json_file:
                 data = json.load(json_file)
         except (FileNotFoundError, json.JSONDecodeError):
             data = []
         
-        # Append new product data
+       
         data.append(product_data)
         
-        # Write the updated data back to the JSON file
+        
         with open(file_path, 'w') as json_file:
             json.dump(data, json_file, indent=4)
