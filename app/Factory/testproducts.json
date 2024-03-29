@@ -426,5 +426,19 @@
             "cache": "3300MB/s"
         },
         "price": 189.99
+    },
+    {
+        "id": 42980,
+        "type": "CPU",
+        "brand": "TestBrand",
+        "model": "TestModel",
+        "specifications": {
+            "cores": 4,
+            "threads": 4,
+            "baseClock": 3.5,
+            "boostClock": 3.9,
+            "tdp": 65
+        },
+        "price": 100.0
     }
 ]
