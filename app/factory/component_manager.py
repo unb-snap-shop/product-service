@@ -1,6 +1,7 @@
 import random
-from app.Factory.concreteFactory import CPUFactory, GPUFactory, MotherboardFactory, RAMFactory, StorageFactory
+from app.factory.concrete_factory import CPUFactory, GPUFactory, MotherboardFactory, RAMFactory, StorageFactory
 from ..utils.product_catalogue import ProductCatalogue
+
 
 class ComponentManager:
     factory_registry = {
@@ -12,7 +13,7 @@ class ComponentManager:
     }
 
     @staticmethod
-    def create_component(component_type, **data):  
+    def create_component(component_type, **data):
         if component_type in ComponentManager.factory_registry:
             factory = ComponentManager.factory_registry[component_type]
             data["id"] = ComponentManager.generate_random_id()

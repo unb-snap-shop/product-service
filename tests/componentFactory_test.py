@@ -10,7 +10,7 @@ project_dir = os.path.dirname(test_dir)
 sys.path.append(project_dir)
 
 # Now you can import your module
-from app.Factory.componentFactory import ComponentFactory, CPU, GPU
+from app.factory.componentFactory import ComponentFactory, CPU, GPU
 
 # The rest of your test code follows...
 

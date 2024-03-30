@@ -130,6 +130,20 @@
                 "cache": "64MB"
             },
             "price": 89.99
+        },
+        {
+            "id": 173955,
+            "type": "CPU",
+            "brand": "fsef",
+            "model": "erfer",
+            "specifications": {
+                "cores": "221",
+                "threads": "424",
+                "baseClock": "2424",
+                "boostClock": "243",
+                "tdp": "2343"
+            },
+            "price": "2334"
         }
     ]
 }
