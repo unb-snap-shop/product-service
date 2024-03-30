@@ -1,5 +1,5 @@
 from app.factory.component import CPU, GPU, Motherboard, RAM, Storage
-from app.factory.componentFactoryInterface import ComponentFactoryInterface
+from app.factory.component_factory_interface import ComponentFactoryInterface
 
 
 class CPUFactory(ComponentFactoryInterface):

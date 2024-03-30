@@ -1,5 +1,5 @@
 import unittest
-from app.factory.componentManager import ComponentManager
+from app.factory.component_manager import ComponentManager
 from app.factory.component import CPU, GPU, Motherboard, RAM, Storage
 
 class TestComponentCreation(unittest.TestCase):

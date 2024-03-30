@@ -1,6 +1,6 @@
 from flask import jsonify, make_response, request, Blueprint
 from app.utils.product_catalogue import ProductCatalogue
-from app.factory.componentManager import ComponentManager
+from app.factory.component_manager import ComponentManager
 from flask_cors import CORS
 
 product_catalogue = ProductCatalogue()

@@ -1,5 +1,5 @@
 import random
-from app.factory.concreteFactory import CPUFactory, GPUFactory, MotherboardFactory, RAMFactory, StorageFactory
+from app.factory.concrete_factory import CPUFactory, GPUFactory, MotherboardFactory, RAMFactory, StorageFactory
 from ..utils.product_catalogue import ProductCatalogue
 
 
