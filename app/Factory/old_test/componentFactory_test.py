@@ -1,6 +1,6 @@
 import unittest
-from componentManager import ComponentManager  
-from component import CPU, GPU, Motherboard, RAM, Storage
+from app.Factory.componentManager import ComponentManager  
+from app.Factory.component import CPU, GPU, Motherboard, RAM, Storage
 
 class TestComponentCreation(unittest.TestCase):
     def test_cpu_creation(self):

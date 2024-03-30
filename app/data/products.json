@@ -1,136 +1,135 @@
 {
     "components": [
-      {
-        "id": 1,
-        "type": "CPU",
-        "brand": "AMD",
-        "model": "Ryzen 5 5600X",
-        "specifications": {
-          "cores": 6,
-          "threads": 12,
-          "baseClock": "3.7 GHz",
-          "boostClock": "4.6 GHz",
-          "tdp": "65W"
+        {
+            "id": 1,
+            "type": "CPU",
+            "brand": "AMD",
+            "model": "Ryzen 5 5600X",
+            "specifications": {
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.7 GHz",
+                "boostClock": "4.6 GHz",
+                "tdp": "65W"
+            },
+            "price": 299.99
         },
-        "price": 299.99
-      },
-      {
-        "id": 2,
-        "type": "CPU",
-        "brand": "Intel",
-        "model": "Core i7-11700K",
-        "specifications": {
-          "cores": 8,
-          "threads": 16,
-          "baseClock": "3.6 GHz",
-          "boostClock": "5.0 GHz",
-          "tdp": "125W"
+        {
+            "id": 2,
+            "type": "CPU",
+            "brand": "Intel",
+            "model": "Core i7-11700K",
+            "specifications": {
+                "cores": 8,
+                "threads": 16,
+                "baseClock": "3.6 GHz",
+                "boostClock": "5.0 GHz",
+                "tdp": "125W"
+            },
+            "price": 399.99
         },
-        "price": 399.99
-      },
-      {
-        "id": 3,
-        "type": "GPU",
-        "brand": "NVIDIA",
-        "model": "GeForce RTX 3080",
-        "specifications": {
-          "memory": "10 GB GDDR6X",
-          "boostClock": "1.71 GHz",
-          "tdp": "320W"
+        {
+            "id": 3,
+            "type": "GPU",
+            "brand": "NVIDIA",
+            "model": "GeForce RTX 3080",
+            "specifications": {
+                "memory": "10 GB GDDR6X",
+                "boostClock": "1.71 GHz",
+                "tdp": "320W"
+            },
+            "price": 699.99
         },
-        "price": 699.99
-      },
-      {
-        "id": 4,
-        "type": "GPU",
-        "brand": "AMD",
-        "model": "Radeon RX 6800 XT",
-        "specifications": {
-          "memory": "16 GB GDDR6",
-          "gameClock": "2015 MHz",
-          "boostClock": "2250 MHz",
-          "tdp": "300W"
+        {
+            "id": 4,
+            "type": "GPU",
+            "brand": "AMD",
+            "model": "Radeon RX 6800 XT",
+            "specifications": {
+                "memory": "16 GB GDDR6",
+                "gameClock": "2015 MHz",
+                "boostClock": "2250 MHz",
+                "tdp": "300W"
+            },
+            "price": 649.99
         },
-        "price": 649.99
-      },
-      {
-        "id": 5,
-        "type": "Motherboard",
-        "brand": "ASUS",
-        "model": "ROG Strix B550-F Gaming",
-        "specifications": {
-          "chipset": "AMD B550",
-          "memory": "128GB DDR4",
-          "formFactor": "ATX"
+        {
+            "id": 5,
+            "type": "Motherboard",
+            "brand": "ASUS",
+            "model": "ROG Strix B550-F Gaming",
+            "specifications": {
+                "chipset": "AMD B550",
+                "memory": "128GB DDR4",
+                "formFactor": "ATX"
+            },
+            "price": 179.99
         },
-        "price": 179.99
-      },
-      {
-        "id": 6,
-        "type": "Motherboard",
-        "brand": "MSI",
-        "model": "MAG B560M Bazooka",
-        "specifications": {
-          "chipset": "Intel B560",
-          "memory": "64GB DDR4",
-          "formFactor": "Micro ATX"
+        {
+            "id": 6,
+            "type": "Motherboard",
+            "brand": "MSI",
+            "model": "MAG B560M Bazooka",
+            "specifications": {
+                "chipset": "Intel B560",
+                "memory": "64GB DDR4",
+                "formFactor": "Micro ATX"
+            },
+            "price": 119.99
         },
-        "price": 119.99
-      },
-      {
-        "id": 7,
-        "type": "RAM",
-        "brand": "Corsair",
-        "model": "Vengeance LPX 16GB",
-        "specifications": {
-          "type": "DDR4",
-          "speed": "3200MHz",
-          "modules": "2 x 8GB",
-          "latency": "CL16"
+        {
+            "id": 7,
+            "type": "RAM",
+            "brand": "Corsair",
+            "model": "Vengeance LPX 16GB",
+            "specifications": {
+                "type": "DDR4",
+                "speed": "3200MHz",
+                "modules": "2 x 8GB",
+                "latency": "CL16"
+            },
+            "price": 89.99
         },
-        "price": 89.99
-      },
-      {
-        "id": 8,
-        "type": "RAM",
-        "brand": "G.Skill",
-        "model": "Trident Z RGB 32GB",
-        "specifications": {
-          "type": "DDR4",
-          "speed": "3600MHz",
-          "modules": "2 x 16GB",
-          "latency": "CL18"
+        {
+            "id": 8,
+            "type": "RAM",
+            "brand": "G.Skill",
+            "model": "Trident Z RGB 32GB",
+            "specifications": {
+                "type": "DDR4",
+                "speed": "3600MHz",
+                "modules": "2 x 16GB",
+                "latency": "CL18"
+            },
+            "price": 159.99
         },
-        "price": 159.99
-      },
-      {
-        "id": 9,
-        "type": "Storage",
-        "brand": "Samsung",
-        "model": "970 EVO Plus 1TB",
-        "specifications": {
-          "type": "SSD",
-          "formFactor": "M.2",
-          "interface": "NVMe",
-          "readSpeed": "3500MB/s",
-          "writeSpeed": "3300MB/s"
+        {
+            "id": 9,
+            "type": "Storage",
+            "brand": "Samsung",
+            "model": "970 EVO Plus 1TB",
+            "specifications": {
+                "type": "SSD",
+                "formFactor": "M.2",
+                "interface": "NVMe",
+                "readSpeed": "3500MB/s",
+                "writeSpeed": "3300MB/s"
+            },
+            "price": 189.99
         },
-        "price": 189.99
-      },
-      {
-        "id": 10,
-        "type": "Storage",
-        "brand": "Western Digital",
-        "model": "Blue 4TB",
-        "specifications": {
-          "type": "HDD",
-          "formFactor": "3.5\"",
-          "interface": "SATA",
-          "rpm": "5400",
-          "cache": "64MB"
-        },
-        "price": 89.99
-      }
+        {
+            "id": 10,
+            "type": "Storage",
+            "brand": "Western Digital",
+            "model": "Blue 4TB",
+            "specifications": {
+                "type": "HDD",
+                "formFactor": "3.5",
+                "interface": "SATA",
+                "rpm": "5400",
+                "cache": "64MB"
+            },
+            "price": 89.99
+        }
     ]
-  }
-  
+}

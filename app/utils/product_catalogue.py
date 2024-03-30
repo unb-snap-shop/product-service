@@ -17,21 +17,27 @@ class ProductCatalogue:
                 self.products = product_data.get('components', [])
             self._is_initialized = True
 
-    # def create_component(self, component_data):
-    #     #Factory method to create components based on component_data
-    #     type = component_data.get('type')
-    #     if not type:
-    #         raise ValueError("Component data must contain a 'type' field.")
-
-        
-    #     for product in self.products:
-    #         if product['type'] == type:
-    #             return product  
-    #     raise ValueError(f"No product found for component type: {type}")
-
 
     def add_product(self, product):
-        self.products.append(product)
+        try:
+            with open('app/data/products.json', 'r') as file:
+                product_data = json.load(file)
+        except (FileNotFoundError, json.JSONDecodeError):
+            product_data = {'components': []}
+        
+        
+        if 'components' not in product_data:
+            product_data['components'] = []
+        
+        # Append the new product to the components list
+        product_data['components'].append(product)
+        
+        with open('app/data/products.json', 'w') as file:
+            json.dump(product_data, file, indent=4)
+
+        # Update the products list
+        self.products = product_data['components']
+
 
     def list_products(self):
         return self.products
