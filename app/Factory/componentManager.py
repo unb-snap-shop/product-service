@@ -19,7 +19,6 @@ class ComponentManager:
             component = factory.create_component(**data)
             catalog = ProductCatalogue()
             catalog.add_product(component)
-            #ComponentManager._write_to_json(component)
             return component
         else:
             raise ValueError(f"Component type {component_type} not registered")

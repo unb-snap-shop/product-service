@@ -21,7 +21,6 @@ def get_products():
 @api.route('/create_component', methods=['POST', 'OPTIONS'])
 def create_component():
     if request.method == 'OPTIONS':
-        # Respond to preflight request
         response = make_response()
         response.headers.add('Access-Control-Allow-Origin', '*')
         response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
@@ -33,12 +32,8 @@ def create_component():
             print(data)
             component_type = data.get('type')
             print(component_type)
-            specifications = data.get('specifications', {})
-            brand = data.get('brand')
-            model = data.get('model')
-            price = data.get('price')
+            
             data.pop('type')
-            #tempdata = brand, model, price, specifications
             component = ComponentManager.create_component(component_type, **data)
             
             response = make_response(jsonify({'message': 'Component created successfully', 'component': component}), 200)
