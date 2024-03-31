@@ -132,18 +132,18 @@
             "price": 89.99
         },
         {
-            "id": 173955,
+            "id": 158660,
             "type": "CPU",
-            "brand": "fsef",
-            "model": "erfer",
+            "brand": "ewic",
+            "model": "ewicV1",
             "specifications": {
-                "cores": "221",
-                "threads": "424",
-                "baseClock": "2424",
-                "boostClock": "243",
-                "tdp": "2343"
+                "cores": "1",
+                "threads": "1",
+                "baseClock": "2",
+                "boostClock": "2",
+                "tdp": "42"
             },
-            "price": "2334"
+            "price": "33.44"
         }
     ]
 }
